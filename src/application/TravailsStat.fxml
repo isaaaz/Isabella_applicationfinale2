@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="StatPane" prefHeight="595.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TravailsStat">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e9f4ff" height="595.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="563.0" />
+      <Label layoutX="118.0" layoutY="56.0" stylesheets="@../../../../Downloads/bootstrap3.css" text="Graphique du temps nécessaire au travail">
+         <font>
+            <Font name="Charter Bold" size="17.0" />
+         </font>
+      </Label>
+      <BarChart fx:id="barChart" layoutX="85.0" layoutY="118.0" prefHeight="411.0" prefWidth="394.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>
