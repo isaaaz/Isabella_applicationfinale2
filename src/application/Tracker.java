@@ -8,7 +8,6 @@ public class Tracker {
 	private String note;
 	
 	
-	// Constructeur vide
 	
 	public Tracker()
 	{

@@ -255,13 +255,13 @@ public class TrackerController implements Initializable {
 		
 
 		
-		// Afficher le graphiques des statistiques 
+		// Afficher le graphique des statistiques 
 		
 		@FXML
 		void handleStats()
 		{
 			try {
-				FXMLLoader loader = new FXMLLoader(Main.class.getResource("TravailsStat.FXML"));
+				FXMLLoader loader = new FXMLLoader(Main.class.getResource("TravailsStat.fxml"));
 				AnchorPane pane = loader.load();
 				Scene scene = new Scene(pane);
 				TravailsStat travailsstat = loader.getController();
