@@ -132,6 +132,7 @@ public class TrackerController implements Initializable {
 			
 			tmp.setTravails(cbotype.getValue());
 			
+			
 			tmp.setTemps(Double.parseDouble(txttemps.getText()));
 			
 			
@@ -253,7 +254,21 @@ public class TrackerController implements Initializable {
 				
 		}
 		
-
+		
+		//Gestion numérique - accepter des caracteres numeriques seulement 
+		@FXML
+		void verifNum()
+		{
+			if(txttemps.getText().equals("")) 
+			txttemps.textProperty().addListener((observable,oldValue,newValue)->
+			{
+				if(!newValue.matches("^[0-9](\\.[0-9]+)?$"))
+				{
+					txttemps.setText(newValue.replaceAll("[^\\d*\\.]", ""));
+				}
+			});
+		}
+		
 		
 		// Afficher le graphique des statistiques 
 		
@@ -278,7 +293,7 @@ public class TrackerController implements Initializable {
 
 		// SAUVEGARDE DE DONNÉES
 		
-		// Recuperer le chemin (path) des fichiers si cela existe 
+		// Recuperer le chemin des fichiers si cela existe 
 		
 		public File getTravailsFilePath()
 		{
@@ -373,7 +388,7 @@ public class TrackerController implements Initializable {
 
 
 		
-			// Commencer un nouveau travails
+			// Commencer un nouveau travail
 		
 			@FXML
 			private void handleNew()
@@ -445,11 +460,6 @@ public class TrackerController implements Initializable {
 				}
 			}
 
-		
-
-		
-		
-		
 		
 
 	}

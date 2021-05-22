@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?> 
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
@@ -21,16 +21,6 @@
                   <MenuItem mnemonicParsing="false" onAction="#handleSaveAs" text="Sauvegarder sous " />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
         </menus>
       </MenuBar>
       <TabPane layoutY="32.0" prefHeight="565.0" prefWidth="563.0" tabClosingPolicy="UNAVAILABLE">
@@ -41,7 +31,7 @@
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e9f4ff" height="523.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="563.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f3f9ff" height="186.0" layoutX="97.0" layoutY="133.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="383.0" />
-                        <Text fontSmoothingType="LCD" layoutX="158.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue dans l'application de gestionnaire de travails. Cette application vous permet de mieux gérer votre temps pour les travaux scolaires en sachant combien de temps est nécessaire pour réaliser chaque type de travail. " wrappingWidth="284.22265625">
+                        <Text fontSmoothingType="LCD" layoutX="151.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue sur l'application de gestion des devoirs. Cette application vous permet de mieux gérer votre temps pour les travaux scolaires en sachant combien de temps est nécessaire pour réaliser chaque type de travail à l'aide d'un graphique. " wrappingWidth="291.22265625">
                            <font>
                               <Font name="Charter Roman" size="13.0" />
                            </font>
@@ -84,7 +74,7 @@
                               <Label text="Temps requis (min)" GridPane.rowIndex="2" />
                               <Label text="Note" GridPane.rowIndex="3" />
                               <TextField fx:id="txtsujet" GridPane.columnIndex="1" />
-                              <TextField fx:id="txttemps" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="txttemps" onKeyTyped="#verifNum" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <TextField fx:id="txtnote" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                               <ComboBox fx:id="cbotype" prefHeight="27.0" prefWidth="195.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
